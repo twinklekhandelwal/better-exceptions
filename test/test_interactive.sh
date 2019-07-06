@@ -3,9 +3,9 @@
 [ -z "${BETEXC_PYTHON}" ] && export BETEXC_PYTHON=python
 
 /usr/bin/expect -f - <<EOF
-spawn ${BETEXC_PYTHON} -m better_exceptions -q
+spawn ${BETEXC_PYTHON} -m ng_exceptions -q
 expect ">>> "
-send "import better_exceptions\r"
+send "import ng_exceptions\r"
 expect ">>> "
 send "def foo(a):\r"
 expect "... "
