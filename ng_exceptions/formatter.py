@@ -279,6 +279,7 @@ class ExceptionFormatter(object):
             tb = tb.tb_next
 
         lines = traceback.format_list(frames)
+        print("yha aaya h")
 
         return ''.join(lines), final_source
 

@@ -22,7 +22,7 @@ from .context import PY3
 from .color import SUPPORTS_COLOR, SHOULD_ENCODE, STREAM
 from .log import BetExcLogger, patch as patch_logging
 from .repl import interact, get_repl
-
+from .translet import*
 
 __version__ = '0.2.2'
 
@@ -51,7 +51,11 @@ def format_exception(exc, value, tb):
 
 def excepthook(exc, value, tb):
     formatted = u''.join(format_exception(exc, value, tb))
+    formatted = translets(formatted)
     write_stream(formatted, STREAM)
+    
+    
+    
 
 
 def hook():

@@ -1,7 +1,7 @@
-graft better_exceptions
+graft ng_exceptions
 graft test
 
-include better_exceptions_hook.pth
+include ng_exceptions_hook.pth
 
 include README.md
 include LICENSE.txt
